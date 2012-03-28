@@ -33,3 +33,7 @@ tmp
 log
 *.log
 *.sqlite3
+
+# RubyMine
+.idea
+atlassian-ide-plugin.xml
