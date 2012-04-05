@@ -169,7 +169,7 @@ describe Devise::Strategies::Oauth2PasswordGrantTypeStrategy do
             :client_id => client.cidentifier,
             :client_secret => client.secret,
             :username => @user.email,
-            :password => 'barz'
+            :password => 'bar'
           }
           post '/oauth2/token', params
         end
