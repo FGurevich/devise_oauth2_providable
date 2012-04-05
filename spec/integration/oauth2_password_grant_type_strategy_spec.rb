@@ -164,19 +164,17 @@ describe Devise::Strategies::Oauth2PasswordGrantTypeStrategy do
         with :client
         before do
           @user = User.create! :email => 'ryan@socialcast.com', :password => 'test'
-
           params = {
             :grant_type => 'password',
             :client_id => client.cidentifier,
             :client_secret => client.secret,
             :username => @user.email,
-            :password => 'bar'
+            :password => 'barz'
           }
-
           post '/oauth2/token', params
         end
         it { response.code.to_i.should == 400 }
-        it { response.content_type.should == 'application/json'  }
+        it { response.content_type.should == 'application/json' }
         it 'returns json' do
           expected = {
             :error_description => "invalid password authentication request",

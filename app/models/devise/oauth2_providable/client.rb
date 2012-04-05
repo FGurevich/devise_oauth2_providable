@@ -9,7 +9,6 @@ class Devise::Oauth2Providable::Client
   field  :cidentifier, :type => String
   field  :secret, :type => String
   
-  
   has_many :access_tokens, :class_name=> "Devise::Oauth2Providable::AccessToken" 
   has_many :refresh_tokens, :class_name=>  "Devise::Oauth2Providable::RefreshToken" 
   has_many :authorization_codes, :class_name=> "Devise::Oauth2Providable::AuthorizationCode"

@@ -11,8 +11,8 @@ module Devise
           cattr_accessor :default_lifetime
           self.default_lifetime = Rails.application.config.devise_oauth2_providable[config_name]
           
-          field :token, :type=>String
-          field :expires_at, :type=> Time
+          field :token, :type => String
+          field :expires_at, :type => Time
           belongs_to :user
           belongs_to :client, :class_name=> "Devise::Oauth2Providable::Client"
 

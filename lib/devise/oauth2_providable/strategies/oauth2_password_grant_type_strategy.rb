@@ -13,6 +13,8 @@ module Devise
           success! resource
         elsif !halted?
           oauth_error! :invalid_grant, 'invalid password authentication request'
+        else
+          oauth_error! :invalid_grant, 'invalid password authentication request'
         end
       end
     end
