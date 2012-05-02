@@ -8,6 +8,8 @@ module Devise
 
       module ClassMethods
         def expires_according_to(config_name)
+          attr_accessible :user, :client
+
           cattr_accessor :default_lifetime
           self.default_lifetime = Rails.application.config.devise_oauth2_providable[config_name]
           
